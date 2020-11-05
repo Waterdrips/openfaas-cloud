@@ -19,7 +19,7 @@ You agree that you will:
 * Not carry out unauthorized load tests or Denial of Service attacks
 * Not publish statistics, reviews or social-media commentary about the cluster
 
-If you wish to do any of the above, then [deploy your own environment](https://github.com/openfaas-incubator/ofc-bootstrap/) where these terms and conditions would not apply.
+If you wish to do any of the above, then [deploy your own environment](https://github.com/openfaas/ofc-bootstrap/) where these terms and conditions would not apply.
 
 ##### To report a vulnerability
 

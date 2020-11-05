@@ -83,7 +83,7 @@ This method assumes that you are using Kubernetes, have a public IP available or
 
 A [developer install is also available via this blog post](https://blog.alexellis.io/openfaas-cloud-for-development/), which disables OAuth and TLS. You will still need an IP address and domain name.
 
-Deploy with: [ofc-bootstrap](https://github.com/openfaas-incubator/ofc-bootstrap)
+Deploy with: [ofc-bootstrap](https://github.com/openfaas/ofc-bootstrap)
 
 ### Option 3: Community Cluster (SaaS)
 

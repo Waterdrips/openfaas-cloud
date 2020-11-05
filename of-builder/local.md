@@ -24,7 +24,7 @@ docker login $DOCKER_USERNAME
 cat $HOME/.docker/config.json
 ```
 
-> Note: If you are having issues with your config.json file, then try [these instructions](https://github.com/openfaas-incubator/ofc-bootstrap#prepare-your-docker-registry).
+> Note: If you are having issues with your config.json file, then try [these instructions](https://github.com/openfaas/ofc-bootstrap#prepare-your-docker-registry).
 
 ## Create a registry secret
 
