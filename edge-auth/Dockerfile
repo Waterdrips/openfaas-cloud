@@ -9,6 +9,7 @@ WORKDIR /go/src/github.com/openfaas/openfaas-cloud/edge-auth
 
 ENV CGO_ENABLED=0
 ENV GO111MODULE=off
+ENV GOFLAGS=-mod=vendor
 
 COPY vendor     vendor
 COPY handlers   handlers
@@ -17,12 +18,13 @@ COPY template   template
 COPY provider   provider
 COPY main.go    .
 
-RUN CGO_ENABLED=${CGO_ENABLED} GOOS=${TARGETOS} GOARCH=${TARGETARCH} go test -v ./...
 
+RUN gofmt -l -d $(find . -type f -name '*.go' -not -path "./vendor/*")
 RUN GOOS=${TARGETOS} GOARCH=${TARGETARCH} CGO_ENABLED=${CGO_ENABLED} go build \
         --ldflags "-s -w" \
-        -a -installsuffix cgo -o edge-auth .
+        -a -installsuffix cgo .
 
+RUN CGO_ENABLED=${CGO_ENABLED} GOOS=${TARGETOS} GOARCH=${TARGETARCH} go test -v ./...
 
 FROM --platform=${TARGETPLATFORM:-linux/amd64} alpine:3.12 as ship
 
