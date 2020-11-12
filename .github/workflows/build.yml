@@ -25,3 +25,5 @@ jobs:
           go-version: ${{ matrix.go-version }}
       - name: Run CI
         run: sh ./contrib/ci.sh
+
+# TODO add build for all containers in here
