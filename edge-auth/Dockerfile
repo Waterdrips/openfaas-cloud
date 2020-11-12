@@ -21,7 +21,7 @@ RUN CGO_ENABLED=${CGO_ENABLED} GOOS=${TARGETOS} GOARCH=${TARGETARCH} go test -v 
 
 RUN GOOS=${TARGETOS} GOARCH=${TARGETARCH} CGO_ENABLED=${CGO_ENABLED} go build \
         --ldflags "-s -w" \
-        -a -installsuffix cgo -o edge-auth .
+        -a -installsuffix cgo .
 
 
 FROM --platform=${TARGETPLATFORM:-linux/amd64} alpine:3.12 as ship
