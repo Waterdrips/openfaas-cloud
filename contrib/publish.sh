@@ -16,5 +16,5 @@ fi
 
 echo "Working folder: `pwd`"
 
-$CLI build --parallel=4
-$CLI build -f dashboard/stack.yml
+$CLI up --parallel=4 --skip-deploy
+$CLI up -f dashboard/stack.yml --skip-deploy
