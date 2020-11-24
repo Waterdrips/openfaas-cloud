@@ -16,4 +16,4 @@ fi
 
 echo "Working folder: `pwd`"
 
-$CLI build -f $STACKFILE
+$CLI build -f $STACKFILE --parallel=4
