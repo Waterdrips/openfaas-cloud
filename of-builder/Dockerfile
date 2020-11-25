@@ -50,4 +50,4 @@ USER app
 EXPOSE 8080
 VOLUME /tmp/
 
-ENTRYPOINT ["/home/app/of-builder"]
+ENTRYPOINT ["./of-builder"]
