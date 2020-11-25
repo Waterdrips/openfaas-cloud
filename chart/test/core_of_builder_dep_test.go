@@ -69,7 +69,7 @@ func makeOFBuilderDep(httpProbe, isECR bool, replicas int, buildkitPrivileged, o
 					Volumes: deployVolumes,
 					Containers: []DeploymentContainers{{
 						Name:                    "of-builder",
-						Image:                   "openfaas/of-builder:0.8.0",
+						Image:                   "ghcr.io/openfaas/ofc-of-builder:0.8.0",
 						ImagePullPolicy:         "IfNotPresent",
 						ContainerReadinessProbe: readinessProbe,
 						ContainerEnvironment:    containerEnvironment,

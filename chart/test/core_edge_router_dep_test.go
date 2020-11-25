@@ -94,7 +94,7 @@ func makeEdgeRouterDep(httpProbe, oauthEnabled bool) YamlSpec {
 				Spec: TemplateSpec{
 					Containers: []DeploymentContainers{{
 						Name:                    "edge-router",
-						Image:                   "openfaas/edge-router:0.7.4",
+						Image:                   "ghcr.io/openfaas/ofc-edge-router:0.7.4",
 						ImagePullPolicy:         "IfNotPresent",
 						ContainerReadinessProbe: readinessProbe,
 						ContainerEnvironment:    containerEnvironment,

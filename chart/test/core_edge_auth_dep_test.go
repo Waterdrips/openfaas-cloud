@@ -87,7 +87,7 @@ func makeEdgeAuthDep(httpProbe, customersSecret, secureCookie bool) YamlSpec {
 					Volumes: deployVolumes,
 					Containers: []DeploymentContainers{{
 						Name:                    "edge-auth",
-						Image:                   "openfaas/edge-auth:0.8.0",
+						Image:                   "ghcr.io/openfaas/ofc-edge-auth:0.8.0",
 						ImagePullPolicy:         "IfNotPresent",
 						ContainerReadinessProbe: livenessProbe,
 						ContainerEnvironment:    containerEnvironment,
